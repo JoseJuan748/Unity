@@ -4,22 +4,24 @@ using UnityEngine;
 
 public class Proyectil : MonoBehaviour
 {
-    float velocidad = 5;
+    public float speed = 5;
 
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector2.right * velocidad * Time.deltaTime);
+        transform.Translate(Vector2.right * speed * Time.deltaTime);
     }
 
-    void OnTriggerEnter2D(Collider2D col)
+    private void OnTriggerEnter2D(Collider2D col)
     {
-        if(col.gameObject.CompareTag("Enemigo 1"))
+        if (col.gameObject.CompareTag("Enemigo 1"))
         {
-            Destroy(col.gameObject);
 
-            // Logica de matar al enemigo
-            print("ola");
+            EnemyLife enemy = col.GetComponent<EnemyLife>();
+
+            enemy.GetDamage();
+
+            Destroy(this.gameObject);
         }
     }
 }
