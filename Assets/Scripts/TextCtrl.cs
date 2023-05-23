@@ -4,13 +4,16 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class TextCtrl : MonoBehaviour
 {
     [SerializeField] private TMP_Text textoVida;
     [SerializeField] private TMP_Text textoCoins;
+    [SerializeField] private GameObject perdiste;
 
     [SerializeField] private GameObject panelGO;
+    [SerializeField] private GameObject restartButton;
 
     public int Vida;
     public int coins;
@@ -37,15 +40,30 @@ public class TextCtrl : MonoBehaviour
             textoVida.text = ": " + Vida.ToString();
             Destroy(collision.gameObject);
 
-            if (Vida <= 0)
-            {
-                panelGO.SetActive(true);
-                panelGO.SetActive(false);
-
-            }
-
-
+            CheckAlive();
         }
 
+    }
+
+    public void UpdateHealth()
+    {
+        Vida -= 10;
+        textoVida.text = ": " + Vida.ToString();
+        CheckAlive();
+    }
+
+    private void CheckAlive()
+    {
+        if (Vida <= 0)
+        {
+            panelGO.SetActive(false);
+            perdiste.SetActive(true);
+            Destroy(this.gameObject);
+        }
+    }
+
+    public void restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

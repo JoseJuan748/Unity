@@ -32,7 +32,7 @@ public class BalaE : MonoBehaviour
         if (col.gameObject.CompareTag("Player"))
         {
             TextCtrl vida = col.GetComponent<TextCtrl>();
-            vida.Vida = vida.Vida - 10;
+            vida.UpdateHealth();
 
             Destroy(this.gameObject);
         }
