@@ -6,7 +6,7 @@ public class EnemyShoot : MonoBehaviour
 {
     [SerializeField] private GameObject bala;
     private int index = 0;
-    private float delay = 5, burstDelay = .2f;
+    private float delay = 10, burstDelay = .2f;
     void Start()
     {
         Invoke(nameof(Shoot), delay);

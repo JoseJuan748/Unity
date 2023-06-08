@@ -24,7 +24,8 @@ public class BalaE : MonoBehaviour
 
     void Update()
     {
-        transform.Translate(Vector3.right * speed * Time.deltaTime);
+        Vector3 unitVector = Vector3.right.normalized;
+        transform.Translate(unitVector * speed * Time.deltaTime);
     }
 
     private void OnTriggerEnter2D(Collider2D col)
