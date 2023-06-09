@@ -43,6 +43,14 @@ public class TextCtrl : MonoBehaviour
             CheckAlive();
         }
 
+        if (collision.gameObject.tag == "Pinchos")
+        {
+            Vida -= 10;
+            textoVida.text = ": " + Vida.ToString();
+
+            CheckAlive();
+        }
+
     }
 
     public void UpdateHealth()

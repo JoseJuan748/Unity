@@ -8,6 +8,7 @@ TagManager:
   - Enemigo 1
   - moneda
   - Ladder
+  - Pinchos
   layers:
   - Default
   - TransparentFX
