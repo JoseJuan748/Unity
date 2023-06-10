@@ -10,11 +10,8 @@ public class LadderMovement : MonoBehaviour
     private bool isClimbing;
 
     [SerializeField] private Rigidbody2D rb;
-    
 
-    
 
-    // Update is called once per frame
     void Update()
     {
         vertical = Input.GetAxis("Vertical");
@@ -24,6 +21,7 @@ public class LadderMovement : MonoBehaviour
             isClimbing = true;
         }
     }
+
     private void FixedUpdate()
     {
         if (isClimbing)
