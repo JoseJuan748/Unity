@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 
 public class LadderMovement : MonoBehaviour
@@ -22,6 +23,25 @@ public class LadderMovement : MonoBehaviour
         }
     }
 
+    public void ClimbingUpButton()
+    {
+        if (isLadder)
+        {
+            print("asda");
+            vertical = 1f;
+            isClimbing = true;
+        }
+    }
+    public void ClimbingDownButton()
+    {
+        if (isLadder)
+        {
+            print("asda");
+            vertical = -1f;
+            isClimbing = true;
+        }
+    }
+
     private void FixedUpdate()
     {
         if (isClimbing)
@@ -31,6 +51,7 @@ public class LadderMovement : MonoBehaviour
         }
         else
         {
+            vertical = 0f;
             rb.gravityScale = 4f;
         }
     }
@@ -41,9 +62,8 @@ public class LadderMovement : MonoBehaviour
         if (collision.CompareTag("Ladder"))
         {
             isLadder = true;
-            Debug.Log("escalera");
+            print($"escalera {isLadder}");
         }
-
     }
 
     private void OnTriggerExit2D(Collider2D collision)

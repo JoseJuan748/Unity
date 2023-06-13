@@ -21,6 +21,10 @@ public class TextCtrl : MonoBehaviour
     public int coins;
     private bool hasWon = false;
 
+    void Awake()
+    {
+        Time.timeScale = 1.0f;
+    }
     private void Start()
     {
         Vida = 100;
@@ -74,7 +78,7 @@ public class TextCtrl : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("winScreen"))
+        if (collision.gameObject.CompareTag("WinTrigger"))
         {
             WinGame();
         }

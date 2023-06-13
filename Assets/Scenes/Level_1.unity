@@ -1183,7 +1183,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 426670859}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.38, y: -1.05, z: -10}
+  m_LocalPosition: {x: -12.7, y: -0.9, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1385,7 +1385,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 474733546}
-  - component: {fileID: 474733547}
   m_Layer: 0
   m_Name: Path2
   m_TagString: Untagged
@@ -1408,21 +1407,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &474733547
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 474733545}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 510697dfed8bf9c4986cea5719ae49c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  waypoints:
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!1 &476280418
 GameObject:
   m_ObjectHideFlags: 0
@@ -2688,29 +2672,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Delegates:
-  - eventID: 3
+  - eventID: 4
     callback:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 674539552093915991, guid: fe1c1df31bdd2f34abe7ec6af1757c66, type: 3}
           m_TargetAssemblyTypeName: LadderMovement, Assembly-CSharp
-          m_MethodName: OnClimbButtonUp
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 2
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 3317783125958688271, guid: fe1c1df31bdd2f34abe7ec6af1757c66, type: 3}
-          m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
-          m_MethodName: 
+          m_MethodName: ClimbingUpButton
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -3115,7 +3083,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1147637693}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.379999, y: -1.05, z: -10}
+  m_LocalPosition: {x: -12.7, y: -0.9, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3701,7 +3669,7 @@ GameObject:
   - component: {fileID: 1441157205}
   m_Layer: 0
   m_Name: winScreen
-  m_TagString: Untagged
+  m_TagString: WinTrigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3792,7 +3760,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1441157200}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 123.1, y: -9.9, z: 0}
+  m_LocalPosition: {x: 55.3, y: -14.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -49174,7 +49142,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1971366981}
-  - component: {fileID: 1971366982}
   m_Layer: 0
   m_Name: Path1
   m_TagString: Untagged
@@ -49197,20 +49164,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1971366982
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1971366980}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 510697dfed8bf9c4986cea5719ae49c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  waypoints:
-  - {fileID: 0}
 --- !u!1 &1997674954
 GameObject:
   m_ObjectHideFlags: 0
@@ -50285,29 +50238,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Delegates:
-  - eventID: 3
+  - eventID: 4
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 3317783125958688271, guid: fe1c1df31bdd2f34abe7ec6af1757c66, type: 3}
-          m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
-          m_MethodName: 
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 2
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 3317783125958688271, guid: fe1c1df31bdd2f34abe7ec6af1757c66, type: 3}
-          m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
-          m_MethodName: Detener
+        - m_Target: {fileID: 3317783127142551346}
+          m_TargetAssemblyTypeName: LadderMovement, Assembly-CSharp
+          m_MethodName: ClimbingDownButton
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -50431,11 +50368,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3317783125958688259, guid: fe1c1df31bdd2f34abe7ec6af1757c66, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.38
+      value: -12.7
       objectReference: {fileID: 0}
     - target: {fileID: 3317783125958688259, guid: fe1c1df31bdd2f34abe7ec6af1757c66, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.05
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: 3317783125958688259, guid: fe1c1df31bdd2f34abe7ec6af1757c66, type: 3}
       propertyPath: m_LocalPosition.z
@@ -50514,3 +50451,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   restartButton: {fileID: 1844465648}
+--- !u!114 &3317783127142551346 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 674539552093915991, guid: fe1c1df31bdd2f34abe7ec6af1757c66, type: 3}
+  m_PrefabInstance: {fileID: 3317783127142551333}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1426755036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25b82008f5f417240a168cca102817ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
