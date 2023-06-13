@@ -19,4 +19,11 @@ public class WinScreen : MonoBehaviour
     {
         restartButton.SetActive(true);
     }
+
+    public void Home(int Menu)
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(Menu);
+    }
+
 }
