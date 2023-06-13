@@ -11,14 +11,17 @@ public class TextCtrl : MonoBehaviour
     [SerializeField] private TMP_Text textoVida;
     [SerializeField] private TMP_Text textoCoins;
     [SerializeField] private GameObject perdiste;
+    [SerializeField] private GameObject ganaste;
 
     [SerializeField] private GameObject panelGO;
     [SerializeField] private GameObject restartButton;
+    [SerializeField] private GameObject individualRestartButton;
 
     public int Vida;
     public int coins;
+    private bool hasWon = false;
 
-    void Start()
+    private void Start()
     {
         Vida = 100;
         textoVida.text = " " + Vida.ToString();
@@ -50,7 +53,6 @@ public class TextCtrl : MonoBehaviour
 
             CheckAlive();
         }
-
     }
 
     public void UpdateHealth()
@@ -70,7 +72,24 @@ public class TextCtrl : MonoBehaviour
         }
     }
 
-    public void restart()
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("winScreen"))
+        {
+            WinGame();
+        }
+    }
+
+    private void WinGame()
+    {
+        panelGO.SetActive(false);
+        ganaste.SetActive(true);
+        Time.timeScale = 0f; // Opcional: Pausar el juego al ganar
+        individualRestartButton.SetActive(false); // Desactivar el botón de reinicio individual
+        SceneManager.LoadScene("PanelGanaste"); // Cargar la escena del panel "Ganaste"
+    }
+
+    public void RestartLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }

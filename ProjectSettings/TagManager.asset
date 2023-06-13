@@ -9,6 +9,7 @@ TagManager:
   - moneda
   - Ladder
   - Pinchos
+  - WinTrigger
   layers:
   - Default
   - TransparentFX
